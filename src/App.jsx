@@ -1,10 +1,27 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
+import { Canvas, useFrame } from '@react-three/fiber'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-import { createRoot } from 'react-dom/client'
-import { Canvas } from '@react-three/fiber'
+function RotatingMesh() {
+  const meshRef = useRef()
+
+  // Rotate the mesh on every frame
+  useFrame(() => {
+    if (meshRef.current) {
+      meshRef.current.rotation.x += 0.01
+      meshRef.current.rotation.y += 0.01
+    }
+  })
+
+  return (
+    <mesh ref={meshRef}>
+      <sphereGeometry args={[2, 32, 32]} />
+      <meshStandardMaterial color="red" />
+    </mesh>
+  )
+}
 
 function App() {
   const [count, setCount] = useState(0)
@@ -33,21 +50,18 @@ function App() {
         For now I will add Three.js. I will add a 3D model of a car and allow the user to rotate it.
       </p>
       <div id="canvas-container">
-        <Canvas >
-          <mesh>
-            <boxGeometry />
-            <meshStandardMaterial />
-          </mesh>
-          </Canvas >
+        <Canvas>
+          <directionalLight color="red" position={[0, 0, 5]} />
+          <ambientLight color="white" />
+          <RotatingMesh />
+        </Canvas>
       </div>
       <div className="App">
-      <header className="App-header">
-        <img src={reactLogo} className="logo react" alt="React logo" />
-
-        <h1>Hello from Amplify</h1>
-      </header>
-    </div>
-
+        <header className="App-header">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+          <h1>Hello from Amplify</h1>
+        </header>
+      </div>
     </>
   )
 }
