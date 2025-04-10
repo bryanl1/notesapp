@@ -26,7 +26,9 @@ function App() {
         </p>
       </div>
       <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+        The plan is to build a fullstack app with React, Express, and MongoDB
+        For now I will add Three.js. I will add a 3D model of a car and allow the user to rotate it.
+
       </p>
       <div className="App">
       <header className="App-header">
