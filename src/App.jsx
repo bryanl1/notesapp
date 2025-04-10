@@ -33,11 +33,12 @@ function App() {
         For now I will add Three.js. I will add a 3D model of a car and allow the user to rotate it.
       </p>
       <div id="canvas-container">
-        <Canvas />
+        <Canvas >
           <mesh>
             <boxGeometry />
-            <meshStandardMaterial color="orange" />
+            <meshStandardMaterial />
           </mesh>
+          </Canvas >
       </div>
       <div className="App">
       <header className="App-header">
