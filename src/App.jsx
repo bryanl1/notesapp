@@ -1,14 +1,17 @@
 import { useState, useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { useLoader } from "@react-three/fiber";
+import { TextureLoader } from 'three'
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
 function RotatingMesh() {
   const meshRef = useRef()
-  const gltf = useLoader(GLTFLoader, "./public/Poimandres.gltf")
+  //const gltf = useLoader(GLTFLoader, "./public/Poimandres.gltf")
+  const marsTexture = useLoader(TextureLoader, 'mars.jpg')
   // Rotate the mesh on every frame
   useFrame(() => {
     if (meshRef.current) {
@@ -20,12 +23,13 @@ function RotatingMesh() {
 
   return (
     
-    <primitive ref={meshRef} object={gltf.scene} scale={1} position={-3,-1.5}/>
-    // <mesh ref={meshRef}>
-    //   <meshPhongMaterial />
-    //   <sphereGeometry args={[2, 32, 32]} />
-    //   <meshStandardMaterial color="white" />
-    // </mesh>
+    //<primitive ref={meshRef} object={gltf.scene} scale={1} position={-3,-1.5}/>
+    <mesh ref={meshRef}>
+      <meshPhongMaterial />
+      <sphereGeometry args={[2, 32, 32]} />
+      <meshStandardMaterial color="white" />
+      <meshStandardMaterial map={marsTexture} />
+    </mesh>
   )
 }
 
@@ -54,6 +58,8 @@ function App() {
 
       <h1>Bryan Linares</h1>
       <h2>CS @ CSULB</h2>
+      The mars texture
+      <img src={'/mars.jpg'} className="logo" alt="Vite logo" />
 
       <div className="card">
         <p>
