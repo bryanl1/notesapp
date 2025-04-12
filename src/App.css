@@ -32,6 +32,9 @@
   flex-direction: column;
   align-items: center;
 }
+.project:hover {
+  border: 1px solid #646cff;
+}
 
 @keyframes logo-spin {
   from {

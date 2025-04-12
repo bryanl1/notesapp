@@ -8,7 +8,7 @@ import './App.css'
 
 function RotatingMesh() {
   const meshRef = useRef()
-  //const gltf = useLoader(GLTFLoader, "/assets/Poimandres.gltf")
+  const gltf = useLoader(GLTFLoader, "./public/Poimandres.gltf")
   // Rotate the mesh on every frame
   useFrame(() => {
     if (meshRef.current) {
@@ -20,12 +20,12 @@ function RotatingMesh() {
 
   return (
     
-    //<primitive ref={meshRef} object={gltf.scene} scale={1} position={-3,-1.5}/>
-    <mesh ref={meshRef}>
-      <meshPhongMaterial />
-      <sphereGeometry args={[2, 32, 32]} />
-      <meshStandardMaterial color="white" />
-    </mesh>
+    <primitive ref={meshRef} object={gltf.scene} scale={1} position={-3,-1.5}/>
+    // <mesh ref={meshRef}>
+    //   <meshPhongMaterial />
+    //   <sphereGeometry args={[2, 32, 32]} />
+    //   <meshStandardMaterial color="white" />
+    // </mesh>
   )
 }
 
