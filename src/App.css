@@ -1,8 +1,15 @@
 #root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  width:100%;
 }
 
 .logo {
@@ -16,6 +23,14 @@
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.project{
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 1em;
+  flex-direction: column;
+  align-items: center;
 }
 
 @keyframes logo-spin {

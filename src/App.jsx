@@ -108,9 +108,11 @@ function App() {
 
 
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)} href="https://github.com/bryanl1">
+        <a href="https://github.com/bryanl1">
+        <button onClick={() => setCount((count) => count + 1)} >
           github.com/bryanl1
         </button>
+        </a>
         <p>
           
         </p>
