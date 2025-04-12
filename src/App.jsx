@@ -20,12 +20,12 @@ function RotatingMesh() {
 
   return (
     
-    <primitive ref={meshRef} object={gltf.scene} scale={1} position={-3,-1.5}/>
-    // <mesh ref={meshRef}>
-    //   <meshPhongMaterial />
-    //   <sphereGeometry args={[2, 32, 32]} />
-    //   <meshStandardMaterial color="white" />
-    // </mesh>
+    //<primitive ref={meshRef} object={gltf.scene} scale={1} position={-3,-1.5}/>
+    <mesh ref={meshRef}>
+      <meshPhongMaterial />
+      <sphereGeometry args={[2, 32, 32]} />
+      <meshStandardMaterial color="white" />
+    </mesh>
   )
 }
 
@@ -34,11 +34,7 @@ function App() {
 
   return (
     <>
-      <div>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
+
       <div id="canvas-container">
         <Canvas>
           <directionalLight color="white" position={[0, 10, 30]} />
@@ -61,73 +57,78 @@ function App() {
 
       <div className="card">
         <p>
+          Hello.<br/>
+          I'm Bryan. I am a Computer Science student at California State University, Long Beach.
+        </p>
+        <p>
+          I expect to graduate in December 2025.
+          I am researching into computer graphics, machine learning, and performance optimization.
+        </p>
 
-          -At the top, my name and schooling. 
-          About me: I am a fullstack developer with experience in React, Express, and MongoDB. 
-          I am currently learning Three.js and Vite.
+      </div>
+      <div className="project">
+        <p>
+          <h2>3D Renderer using OpenGL</h2>
+          C++, OpenGL, SFML, CMake
+          <br/>(In Progress)
         </p>
       </div>
       <div className="project">
         <p>
-          Project: 3D Rendering using OpenGL
+          <h2>Bugfixhound</h2>
+          Boostrap, SQL, Python, FastAPI
+        </p>
+      </div>
+
+      <div className="project">
+        <p>
+        <h2>Personal Website</h2>
+          React, Vite, Three.js, on AWS
+        </p>
+      </div>
+
+      <div className="project">
+        <p>
+          <h2>GBRAINS </h2>
+          FPGA, Verilog, Computer Architecture
         </p>
       </div>
       <div className="project">
         <p>
-          Bugfixhoung
+        <h2>Rolling Arm Robot </h2>
+        Embedded C, Linux, ARM microcontrollers, C++, OpenCV 
         </p>
       </div>
       <div className="project">
         <p>
-          Personal Website
-          <h3>React, Express, MongoDB</h3>
-          <h4>Three.js</h4>
-          <h5>Vite</h5>
-          <h6>Amplify</h6>
-        </p>
-      </div>
-      <div className="project">
-        <p>
-          3D Rendering using OpenGL
-        </p>
-      </div>
-      <div className="project">
-        <p>
-          3D Rendering using OpenGL
-        </p>
-      </div>
-      <div className="project">
-        <p>
-          3D Rendering using OpenGL
+        <h2>SIMPLE interpreter </h2>
+        Java, ANTLR, Interpreter Design
         </p>
       </div>
 
 
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+        <button onClick={() => setCount((count) => count + 1)} href="https://github.com/bryanl1">
+          github.com/bryanl1
         </button>
         <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+          
         </p>
+      </div>
+      <div>
+        <a href="https://react.dev" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
       </div>
       <p className="read-the-docs">
         
-        The plan is to build a fullstack app with React, Express, and MongoDB <br/>
-        For now I will add Three.js. I will add a 3D model of a car and allow the user to rotate it.
       </p>
 
 
       <div className="card">
-        <a href="https://github.com/bryanl1" target="_blank"> My github
+        <a  target="_blank"> 2025
         </a>
         </div>
-      <div className="App">
-        <header className="App-header">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-          <h1>Hello from Amplify</h1>
-        </header>
-      </div>
     </>
   )
 }
