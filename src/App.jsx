@@ -8,7 +8,7 @@ import './App.css'
 
 function RotatingMesh() {
   const meshRef = useRef()
-  const gltf = useLoader(GLTFLoader, "src/assets/Poimandres.gltf")
+  //const gltf = useLoader(GLTFLoader, "/assets/Poimandres.gltf")
   // Rotate the mesh on every frame
   useFrame(() => {
     if (meshRef.current) {
