@@ -58,8 +58,6 @@ function App() {
 
       <h1>Bryan Linares</h1>
       <h2>CS @ CSULB</h2>
-      The mars texture
-      <img src={'/mars.jpg'} className="logo" alt="Vite logo" />
 
       <div className="card">
         <p>
