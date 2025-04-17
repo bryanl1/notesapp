@@ -70,44 +70,50 @@ function App() {
         </p>
 
       </div>
-      <div className="project">
-        <p>
-          <h2>3D Renderer using OpenGL</h2>
-          C++, OpenGL, SFML, CMake
-          <br/>(In Progress)
-        </p>
-      </div>
-      <div className="project">
-        <p>
-          <h2>Bugfixhound</h2>
-          Boostrap, SQL, Python, FastAPI
-        </p>
-      </div>
+      <div className="card">
+        </div>
+        <h3>Selected Projects</h3><br/>
 
-      <div className="project">
-        <p>
-        <h2>Personal Website</h2>
-          React, Vite, Three.js, on AWS
-        </p>
-      </div>
+      <div className ="project-container">
+        <div className="project">
+          <p>
+            <h2>3D Renderer using OpenGL</h2>
+            C++, OpenGL, SFML, CMake
+            <br/>(In Progress)
+          </p>
+        </div>
+        <div className="project">
+          <p>
+            <h2>Bugfixhound</h2>
+            Boostrap, SQL, Python, FastAPI
+          </p>
+        </div>
 
-      <div className="project">
-        <p>
-          <h2>GBRAINS </h2>
-          FPGA, Verilog, Computer Architecture
-        </p>
-      </div>
-      <div className="project">
-        <p>
-        <h2>Rolling Arm Robot </h2>
-        Embedded C, Linux, ARM microcontrollers, C++, OpenCV 
-        </p>
-      </div>
-      <div className="project">
-        <p>
-        <h2>SIMPLE interpreter </h2>
-        Java, ANTLR, Interpreter Design
-        </p>
+        <div className="project">
+          <p>
+          <h2>Personal Website</h2>
+            React, Vite, Three.js, on AWS
+          </p>
+        </div>
+
+        <div className="project">
+          <p>
+            <h2>GBRAINS </h2>
+            FPGA, Verilog, Computer Architecture
+          </p>
+        </div>
+        <div className="project">
+          <p>
+          <h2>Rolling Arm Robot </h2>
+          Embedded C, Linux, ARM microcontrollers, C++, OpenCV 
+          </p>
+        </div>
+        <div className="project">
+          <p>
+          <h2>SIMPLE interpreter </h2>
+          Java, ANTLR, Interpreter Design
+          </p>
+        </div>
       </div>
 
 
@@ -132,7 +138,7 @@ function App() {
 
 
       <div className="card">
-        <a  target="_blank"> 2025
+        <a  target="_blank"> Bryan Linares 2025
         </a>
         </div>
     </>
